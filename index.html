@@ -138,11 +138,7 @@ async function loadData(){
 
 const buoy = buoySelect.value
 
-const url =
-`https://erddap.marine.ie/erddap/tabledap/IWBNetwork.json?
-station_id,time,WaveHeight,WavePeriod,MaxWaveHeight,MaxWavePeriod,PeakDirection
-&station_id="${buoy}"
-&time>=now-36hours`
+const url = `https://erddap.marine.ie/erddap/tabledap/IWBNetwork.json?station_id,time,WaveHeight,WavePeriod,Hmax,Tp,MeanWaveDirection&station_id="${buoy}"&time>=now-36hours`;
 
 try{
 
